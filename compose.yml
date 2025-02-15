@@ -1,0 +1,12 @@
+services:
+  noah-mqtt:
+    container_name: noah-mqtt
+    image: ghcr.io/mtrossbach/noah-mqtt:latest
+    restart: unless-stopped
+    environment:
+      GROWATT_USERNAME: ${GROWATT_USERNAME}
+      GROWATT_PASSWORD: ${GROWATT_PASSWORD}
+      MQTT_HOST: localhost
+      MQTT_PORT: 1883
+    env_file:
+      - .env

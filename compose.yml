@@ -6,6 +6,7 @@ services:
     environment:
       GROWATT_USERNAME: ${GROWATT_USERNAME}
       GROWATT_PASSWORD: ${GROWATT_PASSWORD}
+      POLLING_INTERVAL: 180
       MQTT_HOST: localhost
       MQTT_PORT: 1883
     env_file:
